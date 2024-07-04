@@ -1,0 +1,333 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+/*for burger menu to make unscrollable*/
+html, body{
+    height: 100vh;
+}
+
+.site-title {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    align-self: center;
+}
+
+.navbar {
+    background: white;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    border-bottom: 1px solid rgba(60, 60, 67, .12);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0.75em 2em;
+}
+
+.container{
+    padding-top: 3.5em;
+}
+
+.dark-toggle{
+    user-select: none;
+    margin-right: 2.5rem;
+    transform: scale(0.8);
+}
+
+.nav-item {
+    color: grey;
+    margin-left: 1em;
+    text-decoration: none;
+}
+
+.menu-heading{
+    padding-top: 1em;
+}
+
+li {
+    margin-top: 0.35em;
+    list-style: none;
+}
+
+.button{
+    box-sizing: border-box;
+    margin: 1em 0;
+    border: 3px solid black;
+    border-radius: 6px;
+    display: block;
+    width: 6.5em;
+    padding: 0.5em 0;
+    background: linear-gradient(to right, black 50%, white 50%) right bottom;
+    background-size: 200% 100%;
+    transition: background-position .5s ease-out;
+    cursor: pointer;
+}
+
+.button:active{
+    transform: scale(0.95);
+}
+
+.button:hover{
+    background-position: left bottom;
+}
+
+.text{
+    font-size: 13px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+    color: black;
+    transition: all .6s ease-out;
+    display: block;
+}
+
+.button:hover .text{
+    color:white;
+}
+
+.dark-button{
+    box-sizing: border-box;
+    margin: 1em 0;
+    border: 2px solid white;
+    border-radius: 6px;
+    display: block;
+    width: 6.5em;
+    padding: 0.5em 0;
+    background: linear-gradient(to right, white 50%, black 50%) right bottom;
+    background-size: 200% 100%;
+    transition: background-position .5s ease-out;
+    cursor: pointer;
+}
+
+.dark-button:hover{
+    background-position: left bottom;
+}
+
+.dark-text{
+    font-size: 13px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+    transition: all .6s ease-out;
+    display: block;
+}
+
+.dark-button:hover .dark-text{
+    color: black;
+}
+
+
+
+.heading{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+
+.card {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border-radius: 6px 6px 0 0;
+    overflow: hidden;
+    width: 325px;
+    transition: transform 0.5s;
+}
+
+.card-light{
+    background-color: white;
+}
+
+.card-dark{
+    background-color: black;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-body {
+    padding: 0 1.5em 1em;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.row {
+    padding: 1em 2em;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    justify-items: center;
+    row-gap: 50px;
+}
+
+.img-div {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    height: 239px;
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px 6px 0 0;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+.spinner {
+    display: flex;
+    justify-content: center;
+    transform: scale(0.5);
+}
+
+.scroll-end {
+    text-align: center;
+}
+
+h3 {
+    margin-top: 0;
+    padding-top: 1.5em;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #aaaaaa;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: gray;
+}
+
+.bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 20px;
+    right: 36px;
+    top: 21px;
+    width: 30px;
+}
+
+.bm-burger-bars {
+    background: black;
+}
+
+
+#outer-container{
+    height: 100%;
+    overflow: hidden;
+}
+
+#page-wrap{
+    height: 100%;
+    overflow: hidden;
+    background-color: white;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+    margin-top: 0.5em;
+    position: relative;
+    left: 20px;
+    height: 24px;
+    width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+    background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+    overflow: hidden!important;
+    background: #373a47;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+    fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+    color: #b8b7ad;
+    padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+    display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+    background: #303030;
+}
+
+@media (min-width: 768px) {
+    .row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .heading{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .row{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .heading{
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1536px) {
+    .row{
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/*problems
+1)flex box space around for 2 news card
+2)// duplicate problem due to setState is asynchronous  this.setState{page : this.state.page+1}
+3)/ eslint-disable-next-line react-hooks/exhaustive-deps
+problem here infinte api calls as useEffect runs multiple times, use [] to solve.  imp
+4)react router exact path.
+5)react router key(change component) not updating the props(same News component instead of 'about' component in textutilts)problem here infinte api calls as useEffect runs multiple times, use [] to solve.  imp
+6) react burger menu scacle rotate height 100vh issue, when 100vh additional news does not load (infinite scroll). Fixed by handleOpen handleClose on menu component.
+
+1)dark mode css
+2)title logo*/
